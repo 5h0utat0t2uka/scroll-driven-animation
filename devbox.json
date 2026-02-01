@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.16.0/.schema/devbox.schema.json",
+  "packages": [
+    "github:NixOS/nixpkgs/77ef7a29d276c6d8303aece3444d61118ef71ac2#nodejs_24",
+    "github:NixOS/nixpkgs/77ef7a29d276c6d8303aece3444d61118ef71ac2#pnpm",
+    "github:NixOS/nixpkgs/77ef7a29d276c6d8303aece3444d61118ef71ac2#nodePackages.npm-check-updates"
+  ],
+  "shell": {
+    "init_hook": [
+      "echo 'Welcome to devbox!' > /dev/null"
+    ],
+    "scripts": {
+      "dev": "pnpm dev",
+      "install": "pnpm install --frozen-lockfile",
+      "build": "pnpm build",
+      "lint": "pnpm lint",
+      "preview": "pnpm preview"
+    }
+  }
+}

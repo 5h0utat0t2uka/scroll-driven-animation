@@ -1,0 +1,95 @@
+@keyframes scroll {
+	to {
+		transform: translateX(calc(-100% + 100svi));
+	}
+}
+.container {
+  --text-lg-min: 24px;
+  --text-lg-max: 36px;
+  font-family: "Geist", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  h1 {
+    font-family: sans-serif;
+    font-size: clamp(
+      var(--text-lg-min),
+      var(--text-lg-min) + progress(100svi, 375px, 1440px) * (var(--text-lg-max) - var(--text-lg-min)),
+      var(--text-lg-max)
+    );
+  }
+  .hero, .footer {
+    block-size: 100svb;
+    display: grid;
+    place-content: center;
+    background: blue;
+    color: whitesmoke
+  }
+  .footer {
+    font-size: 12px;
+  }
+  .horizontal {
+    --block-size: 100svb;
+    --column-size: 80cqi;
+    --column-size: min(90cqi, 640px);
+    --column-space: 32px;
+    --columns: 4;
+
+    container-type: size;
+    block-size: calc(var(--column-size) * var(--columns));
+    view-timeline-name: --section-pin-1;
+    view-timeline-axis: block;
+  	> .body {
+  	  contain: paint;
+      inline-size: 100cqi;
+      block-size: var(--block-size);
+      block-size: 100svb;
+      position: sticky;
+      inset-block-start: 0;
+      align-items: center;
+      place-content: center;
+  		> .scroller {
+    		clip-path: inset(var(--column-space));
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(0, 1fr);
+        /*grid-auto-columns: minmax(0, calc(var(--column-size) - var(--column-space)));*/
+        gap: var(--column-space);
+        align-content: center;
+        /*min-inline-size: calc(var(--block-size) * var(--columns));*/
+        min-inline-size: calc(var(--column-size) * var(--columns));
+        will-change: transform;
+        animation: linear scroll forwards;
+        animation-timeline: --section-pin-1;
+        animation-range: contain 0% contain 100%;
+        /*animation-range: contain var(--column-space) contain calc(100% - var(--column-space));*/
+        > .item {
+          block-size: var(--block-size);
+          /*block-size: 80svb;*/
+          &:nth-child(1) {
+            display: grid;
+            place-content: center;
+            container-type: inline-size;
+            > h2 {
+              font-size: 6cqi;
+              font-weight: 700;
+            }
+            > p {
+              font-size: 2.2cqi;
+              font-weight: 300;
+              color: dimgray;
+            }
+          }
+          /*&:has(img) {
+            clip-path: inset(0 round 16px);
+          }*/
+          > img {
+            aspect-ratio: 1920/2560;
+            block-size: 100%;
+            object-fit: cover;
+          }
+        }
+  		}
+  	}
+  }
+}

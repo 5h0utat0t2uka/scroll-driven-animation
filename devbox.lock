@@ -1,0 +1,21 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "github:NixOS/nixpkgs/77ef7a29d276c6d8303aece3444d61118ef71ac2#nodePackages.npm-check-updates": {
+      "last_modified": "1970-01-01T00:00:00Z",
+      "resolved": "github:NixOS/nixpkgs/77ef7a29d276c6d8303aece3444d61118ef71ac2#nodePackages.npm-check-updates"
+    },
+    "github:NixOS/nixpkgs/77ef7a29d276c6d8303aece3444d61118ef71ac2#nodejs_24": {
+      "last_modified": "1970-01-01T00:00:00Z",
+      "resolved": "github:NixOS/nixpkgs/77ef7a29d276c6d8303aece3444d61118ef71ac2#nodejs_24"
+    },
+    "github:NixOS/nixpkgs/77ef7a29d276c6d8303aece3444d61118ef71ac2#pnpm": {
+      "last_modified": "1970-01-01T00:00:00Z",
+      "resolved": "github:NixOS/nixpkgs/77ef7a29d276c6d8303aece3444d61118ef71ac2#pnpm"
+    },
+    "github:NixOS/nixpkgs/nixpkgs-unstable": {
+      "last_modified": "2026-01-26T09:54:05Z",
+      "resolved": "github:NixOS/nixpkgs/5b265bda51b42a2a85af0a543c3e57b778b01b7d?lastModified=1769421245"
+    }
+  }
+}

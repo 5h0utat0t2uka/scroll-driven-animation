@@ -1,0 +1,6 @@
+.hgroup {
+  place-self: center;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
