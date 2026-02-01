@@ -10,7 +10,7 @@ export default function Home() {
           <li><Link to="/grid">Grid scroll</Link></li>
         </ul>
         <ul>
-          <li><a href="https://github.com/yourusername/scroll-driven-animation" target="_blank">Repo</a></li>
+          <li><a href="https://github.com/5h0utat0t2uka/scroll-driven-animation" target="_blank">Repo</a></li>
         </ul>
       </section>
     </>
