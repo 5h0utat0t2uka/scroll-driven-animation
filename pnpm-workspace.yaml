@@ -1,0 +1,7 @@
+# pnpm-workspace.yaml
+packages:
+  - '.'
+
+onlyBuiltDependencies:
+  - '@swc/core'
+  - 'esbuild'
