@@ -3,7 +3,38 @@
   --block-size: 70svb;
   --column-gap: 24px;
 }
-@keyframes scroll {
+.link {
+  --space-min: 36px;
+  --space-max: 48px;
+  --space: clamp(
+    var(--space-min),
+    var(--space-min) + progress(100svi, 375px, 1280px) * (var(--space-max) - var(--space-min)),
+    var(--space-max)
+  );
+  inline-size: fit-content;
+  position: fixed;
+  inset-inline-end: calc(var(--space) + env(safe-area-inset-left));
+  inset-block-start: var(--space);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.25ch;
+  font-size: 14px;
+  color: white;
+  mix-blend-mode: difference;
+  z-index: 1;
+  &::after {
+    display: inline-grid;
+    content: '';
+    justify-self: end;
+    mask-image: var(--icon-arrow);
+    block-size: 0.8lh;
+    aspect-ratio: 1;
+    background-color: currentColor;
+    rotate: -45deg
+  }
+}
+@keyframes scroll-column {
   from {
     transform: translateY(calc(-100% + var(--block-size)));
   }
@@ -55,6 +86,7 @@
     overflow: auto;
     /*overscroll-behavior: contain;*/
     scrollbar-width: none;
+    /*-webkit-overflow-scrolling: auto;*/
 
     inline-size: var(--inline-size);
     block-size: var(--block-size);
@@ -78,14 +110,14 @@
         &:nth-child(even) {
           flex-direction: column-reverse;
           transform: translateY(calc(-100% + var(--block-size)));
-          animation: scroll linear forwards;
+          animation: scroll-column linear forwards;
           /*animation-timeline: scroll(root block);*/
           animation-timeline: scroll(block);
         }
         > .item {
           aspect-ratio: 2/3;
           object-fit: cover;
-          clip-path: inset(0 round 8px);
+          clip-path: inset(0 round 6px);
         }
       }
     }
