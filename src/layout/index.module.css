@@ -14,7 +14,7 @@
   inline-size: fit-content;
   position: fixed;
   inset-inline-start: calc(var(--space) + env(safe-area-inset-left));
-  inset-block-start: var(--space);
+  inset-block-end: var(--space);
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
