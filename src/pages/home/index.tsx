@@ -6,8 +6,9 @@ export default function Home() {
     <>
       <section className={styles.section}>
         <ul>
-          <li><Link prefetch="intent" to="/horizontal">Horizontal scroll</Link></li>
-          <li><Link prefetch="intent" to="/grid">Grid scroll</Link></li>
+          <li><Link prefetch="viewport" to="/horizontal">Horizontal inline scroll</Link></li>
+          <li><Link prefetch="viewport" to="/grid">Grid columns scroll</Link></li>
+          <li><Link prefetch="viewport" to="/parallax">Parallax elements scroll</Link></li>
         </ul>
         <ul>
           <li><a href="https://github.com/5h0utat0t2uka/scroll-driven-animation" target="_blank">Repo</a></li>

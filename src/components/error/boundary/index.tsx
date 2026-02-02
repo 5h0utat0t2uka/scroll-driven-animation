@@ -11,6 +11,7 @@ type State = {
 
 class ErrorBoundary extends Component<Props, State> {
   state: State = {}
+
   static getDerivedStateFromError(error: Error): State {
     return { error }
   }
@@ -18,6 +19,7 @@ class ErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error) {
     console.error('Uncaught error:', error)
   }
+
   render() {
     const { error } = this.state
     if (!error) {

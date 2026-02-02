@@ -27,6 +27,15 @@ const router = createBrowserRouter([
         }
       },
       {
+        path: "grid",
+        lazy: async () => {
+          const [{ default: Page }] = await Promise.all([
+            import("./pages/grid/index")
+          ]);
+          return { Component: Page };
+        }
+      },
+      {
         path: "*",
         lazy: async () => {
           const [{ default: NotFound }] = await Promise.all([
