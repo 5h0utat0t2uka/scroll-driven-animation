@@ -6,6 +6,8 @@
 .container {
   --text-lg-min: 24px;
   --text-lg-max: 36px;
+  --text-sm-min: 8px;
+  --text-sm-max: 12px;
   font-family: "Geist", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -14,7 +16,7 @@
     font-family: sans-serif;
     font-size: clamp(
       var(--text-lg-min),
-      var(--text-lg-min) + progress(100svi, 375px, 1440px) * (var(--text-lg-max) - var(--text-lg-min)),
+      var(--text-lg-min) + progress(100svi, 375px, 1280px) * (var(--text-lg-max) - var(--text-lg-min)),
       var(--text-lg-max)
     );
   }
@@ -23,14 +25,19 @@
     display: grid;
     place-content: center;
     background: blue;
-    color: whitesmoke
+    color: whitesmoke;
+    text-align: center;
   }
   .footer {
-    font-size: 12px;
+    font-size: clamp(
+      var(--text-sm-min),
+      var(--text-sm-min) + progress(100svi, 375px, 1280px) * (var(--text-sm-max) - var(--text-sm-min)),
+      var(--text-sm-max)
+    );
+
   }
   .horizontal {
-    --block-size: 100svb;
-    --column-size: 80cqi;
+    --block-size: 100dvb;
     --column-size: min(90cqi, 640px);
     --column-space: 32px;
     --columns: 4;
@@ -42,8 +49,9 @@
   	> .body {
   	  contain: paint;
       inline-size: 100cqi;
-      block-size: var(--block-size);
-      block-size: 100svb;
+      block-size: 100dvb;
+      /*block-size: var(--block-size);*/
+
       position: sticky;
       inset-block-start: 0;
       align-items: center;
@@ -53,23 +61,22 @@
         display: grid;
         grid-auto-flow: column;
         grid-auto-columns: minmax(0, 1fr);
-        /*grid-auto-columns: minmax(0, calc(var(--column-size) - var(--column-space)));*/
         gap: var(--column-space);
         align-content: center;
-        /*min-inline-size: calc(var(--block-size) * var(--columns));*/
         min-inline-size: calc(var(--column-size) * var(--columns));
-        will-change: transform;
+        /*will-change: transform;*/
         animation: linear scroll forwards;
         animation-timeline: --section-pin-1;
         animation-range: contain 0% contain 100%;
         /*animation-range: contain var(--column-space) contain calc(100% - var(--column-space));*/
         > .item {
           block-size: var(--block-size);
-          /*block-size: 80svb;*/
+          block-size: 90svb;
           &:nth-child(1) {
             display: grid;
             place-content: center;
             container-type: inline-size;
+            gap: 0.25lh;
             > h2 {
               font-size: 6cqi;
               font-weight: 700;
@@ -80,9 +87,6 @@
               color: dimgray;
             }
           }
-          /*&:has(img) {
-            clip-path: inset(0 round 16px);
-          }*/
           > img {
             aspect-ratio: 1920/2560;
             block-size: 100%;

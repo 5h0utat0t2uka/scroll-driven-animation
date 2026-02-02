@@ -3,14 +3,23 @@
   min-block-size: 100svb;
 }
 .link {
+  --space-min: 36px;
+  --space-max: 48px;
+  --space: clamp(
+    var(--space-min),
+    var(--space-min) + progress(100svi, 375px, 1280px) * (var(--space-max) - var(--space-min)),
+    var(--space-max)
+  );
+
   inline-size: fit-content;
   position: fixed;
-  inset-inline-start: 24px;
-  inset-block-end: 24px;
+  inset-inline-start: calc(var(--space) + env(safe-area-inset-left));
+  inset-block-end: var(--space);
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
   gap: 0.25ch;
+  font-size: 14px;
   color: white;
   mix-blend-mode: difference;
   z-index: 1;

@@ -1,7 +1,7 @@
 import styles from './index.module.css'
-import visual1 from '../../../public/images/4.jpg.webp'
-import visual2 from '../../../public/images/5.jpg.webp'
-import visual3 from '../../../public/images/6.jpg.webp'
+// import visual1 from '../../../public/images/4.jpg.webp'
+// import visual2 from '../../../public/images/5.jpg.webp'
+// import visual3 from '../../../public/images/6.jpg.webp'
 
 export default function Page() {
   return (
@@ -16,9 +16,9 @@ export default function Page() {
               <h2>Lignes et Formes</h2>
               <p>2025 Fall Winter</p>
             </hgroup>
-            <div className={styles.item}><img src={visual1} width={1920} height={2560} alt="" /></div>
-            <div className={styles.item}><img src={visual2} width={1920} height={2560} alt="" /></div>
-            <div className={styles.item}><img src={visual3} width={1920} height={2560} alt="" /></div>
+            <div className={styles.item}><img src={`/images/4.jpg.webp`} width={1920} height={2560} alt="" /></div>
+            <div className={styles.item}><img src={`/images/5.jpg.webp`} width={1920} height={2560} alt="" /></div>
+            <div className={styles.item}><img src={`/images/6.jpg.webp`} width={1920} height={2560} alt="" /></div>
           </div>
         </div>
       </section>
