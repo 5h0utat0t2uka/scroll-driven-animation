@@ -27,6 +27,15 @@ const router = createBrowserRouter([
         }
       },
       {
+        path: "parallax",
+        lazy: async () => {
+          const [{ default: Page }] = await Promise.all([
+            import("./pages/parallax/index")
+          ]);
+          return { Component: Page };
+        }
+      },
+      {
         path: "grid",
         lazy: async () => {
           const [{ default: Page }] = await Promise.all([

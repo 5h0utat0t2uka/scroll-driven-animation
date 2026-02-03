@@ -4,10 +4,10 @@ import styles from './index.module.css'
 export default function Page() {
   return (
     <>
-      <RepositoryLink path="/tree/main/src/pages/grid" />
+      <RepositoryLink path="/tree/main/src/pages/parallax" />
       <div className={styles.container}>
         <section className={styles.hero}>
-          <h1>Multi columns grid with animation timeline</h1>
+          <h1>Parallax carousel slider with animation timeline</h1>
         </section>
         <section className={styles.grid}>
           <div className={styles.body}>

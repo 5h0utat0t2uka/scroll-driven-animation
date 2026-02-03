@@ -10,7 +10,7 @@ export default function Layout() {
       <ScrollRestoration />
       <main className={styles.main}>
         <ErrorBoundary>
-          {pathname !== '/' && (<Link to="/" prefetch="intent" className={styles.link}>Back</Link>)}
+          {pathname !== '/' && (<Link to="/" prefetch="intent" className={styles.link}>Index</Link>)}
           <Outlet />
         </ErrorBoundary>
       </main>

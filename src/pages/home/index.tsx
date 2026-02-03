@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { REPOSITORY_URL } from "../../constant";
 import styles from './index.module.css'
 
 export default function Home() {
@@ -6,12 +7,12 @@ export default function Home() {
     <>
       <section className={styles.section}>
         <ul>
-          <li><Link prefetch="viewport" to="/horizontal">Horizontal inline scroll</Link></li>
-          <li><Link prefetch="viewport" to="/grid">Grid columns scroll</Link></li>
-          <li><Link prefetch="viewport" to="/parallax">Parallax elements scroll</Link></li>
+          <li><Link prefetch="viewport" to="/horizontal">Horizontal scroll with view timeline</Link></li>
+          <li><Link prefetch="viewport" to="/parallax">Parallax carousel slider with animation timeline</Link></li>
+          <li><Link prefetch="viewport" to="/grid">Multi columns grid with animation timeline</Link></li>
         </ul>
         <ul>
-          <li><a href="https://github.com/5h0utat0t2uka/scroll-driven-animation" target="_blank">Repo</a></li>
+          <li><a href={REPOSITORY_URL} target="_blank">Repo</a></li>
         </ul>
       </section>
     </>

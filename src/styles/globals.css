@@ -25,8 +25,9 @@
 
 body {
   line-height: 1.5;
-  font-family: "Geist", sans-serif;
+  font-family: "Geist Mono", monospace;
   font-optical-sizing: auto;
+  font-weight: 400;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
 }

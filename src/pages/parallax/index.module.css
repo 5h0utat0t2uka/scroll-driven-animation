@@ -27,6 +27,7 @@
     font-family: "Instrument Serif", serif;
     font-weight: 100;
     font-style: normal;
+
     font-size: clamp(
       var(--text-lg-min),
       var(--text-lg-min) + progress(100svi, 375px, 1280px) * (var(--text-lg-max) - var(--text-lg-min)),
