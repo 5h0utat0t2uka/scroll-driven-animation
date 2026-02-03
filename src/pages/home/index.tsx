@@ -9,6 +9,7 @@ export default function Home() {
         <ul>
           <li><Link prefetch="viewport" to="/horizontal">Horizontal scroll with view timeline</Link></li>
           <li><Link prefetch="viewport" to="/parallax">Parallax carousel slider with animation timeline</Link></li>
+          <li><Link prefetch="viewport" to="/stack">Scroll stack scale effect with animation timeline</Link></li>
           <li><Link prefetch="viewport" to="/grid">Multi columns grid with animation timeline</Link></li>
         </ul>
         <ul>
