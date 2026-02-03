@@ -69,6 +69,7 @@
       place-content: center;
   		> .scroller {
     		clip-path: inset(var(--column-space));
+        /*padding: var(--column-space);*/
         display: grid;
         grid-auto-flow: column;
         grid-auto-columns: minmax(0, 1fr);

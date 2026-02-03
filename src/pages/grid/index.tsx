@@ -25,7 +25,7 @@ export default function Page() {
                 <img className={styles.item} src={`/images/2.jpg.webp`} width={1920} height={2880} alt="" />
                 <img className={styles.item} src={`/images/3.jpg.webp`} width={1920} height={2880} alt="" />
                 <img className={styles.item} src={`/images/15.jpg.webp`} width={1920} height={1549} alt="" />
-                <img className={styles.item} src={`/images/16.jpg.webp`} width={1920} height={2880} alt="" />
+                <img className={styles.item} src={`/images/19.jpg.webp`} width={1920} height={1280} alt="" />
                 <img className={styles.item} src={`/images/17.jpg.webp`} width={1920} height={2891} alt="" />
               </div>
               <div className={styles.column}>
