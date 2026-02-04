@@ -85,22 +85,23 @@
           block-size: var(--block-size);
           block-size: 90svb;
           &:nth-child(1) {
-            font-family: "Geist", sans-serif;
-            font-optical-sizing: auto;
-            font-style: normal;
-
             display: grid;
             place-content: center;
             container-type: inline-size;
             gap: 0.25lh;
             > h2 {
-              font-size: 5.2cqi;
+              font-family: "Instrument Serif", serif;
+              font-weight: 100;
+              font-style: normal;
+              font-size: 5.6cqi;
               font-weight: 700;
             }
             > p {
+              font-family: "Geist", sans-serif;
+              font-optical-sizing: auto;
+              font-style: normal;
               font-size: 2.6cqi;
               font-weight: 300;
-              color: dimgray;
             }
           }
           > img {

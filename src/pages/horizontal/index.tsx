@@ -16,7 +16,7 @@ export default function Page() {
             <div className={styles.scroller}>
               <hgroup className={styles.item}>
                 <h2>Lorem ipsum dolor sit amet</h2>
-                <p>2025 Fall Winter</p>
+                <p>consectetur adipiscing elit</p>
               </hgroup>
               <div className={styles.item}><img src={`/images/4.jpg.webp`} width={1920} height={2560} alt="" /></div>
               <div className={styles.item}><img src={`/images/5.jpg.webp`} width={1920} height={2560} alt="" /></div>

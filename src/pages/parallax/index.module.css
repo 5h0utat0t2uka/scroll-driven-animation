@@ -78,6 +78,10 @@
     display: grid;
     place-content: center;
     block-size: 100svb;
+    > * {
+      grid-area: 1/-1;
+      place-self: center;
+    }
     > .list {
       list-style: none;
       padding: 0;
@@ -86,7 +90,7 @@
       overflow: auto;
       inline-size: 80cqi;
       margin-inline: auto;
-      margin-block-end: min(10svb, 72px);
+      /*margin-block-end: min(10svb, 72px);*/
       display: grid;
       grid-auto-columns: min(82%, 620px);
       grid-auto-flow: column;
@@ -97,7 +101,8 @@
         clip-path: inset(0 round 6px);
         > img {
           aspect-ratio: 2/3;
-          max-block-size: 80svb;
+          /*aspect-ratio: 3/4;*/
+          /*max-block-size: 80svb;*/
           object-fit: cover;
           object-position: 100% 0;
           animation: parallax linear both;
@@ -108,7 +113,8 @@
 
     > .border {
       mix-blend-mode: difference;
-      inline-size: min(25cqi, 180px);
+      /*inline-size: min(25cqi, 180px);*/
+      inline-size: min(20cqi, 100px);
       margin-inline: auto;
       background: color-mix(in srgb, white 15%, transparent);
       display: grid;

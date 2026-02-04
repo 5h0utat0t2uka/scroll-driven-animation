@@ -18,6 +18,15 @@ const router = createBrowserRouter([
         }
       },
       {
+        path: "parallax",
+        lazy: async () => {
+          const [{ default: Page }] = await Promise.all([
+            import("./pages/parallax/index")
+          ]);
+          return { Component: Page };
+        }
+      },
+      {
         path: "horizontal",
         lazy: async () => {
           const [{ default: Page }] = await Promise.all([
@@ -27,10 +36,10 @@ const router = createBrowserRouter([
         }
       },
       {
-        path: "parallax",
+        path: "stack",
         lazy: async () => {
           const [{ default: Page }] = await Promise.all([
-            import("./pages/parallax/index")
+            import("./pages/stack/index")
           ]);
           return { Component: Page };
         }

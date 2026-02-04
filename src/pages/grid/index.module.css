@@ -80,8 +80,6 @@
       grid-template-columns: repeat(3, 1fr);
       gap: var(--column-gap);
       overflow-y: clip;
-
-
       > .column {
         display: flex;
         gap: var(--column-gap);
@@ -96,7 +94,7 @@
           animation-timeline: scroll(block);
         }
         > .item {
-          aspect-ratio: 2/3;
+          aspect-ratio: 3/4;
           object-fit: cover;
           clip-path: inset(0 round 6px);
         }

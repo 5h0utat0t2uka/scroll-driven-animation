@@ -11,6 +11,11 @@
   margin: 0;
 }
 
+::selection {
+  background-color: red;
+  color: white;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   html {
     interpolate-size: allow-keywords;
@@ -50,6 +55,9 @@ p {
 }
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
+}
+ul {
+  padding-inline: 0;
 }
 
 #root {
