@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { RepositoryLink } from "../../components/link";
 import { Popover } from "../../components/popover";
 import styles from './index.module.css'
@@ -15,17 +16,25 @@ export default function Page() {
         </section>
         <section className={styles.cards}>
           <ul className={styles.list}>
-            <li className={styles.item}>
-              <div className={styles.content}><img src={`/images/9.jpg.webp`} width={1920} height={1280} alt="" /></div>
+            <li className={styles.item} style={{ '--index': 1 } as CSSProperties}>
+              <div className={styles.content}>
+                <img src={`/images/9.jpg.webp`} width={1920} height={1280} alt="" />
+              </div>
             </li>
-            <li className={styles.item}>
-              <div className={styles.content}><img src={`/images/7.jpg.webp`} width={1920} height={1280} alt="" /></div>
+            <li className={styles.item} style={{ '--index': 2 } as CSSProperties}>
+              <div className={styles.content}>
+                <img src={`/images/7.jpg.webp`} width={1920} height={1280} alt="" />
+              </div>
             </li>
-            <li className={styles.item}>
-              <div className={styles.content}><img src={`/images/8.jpg.webp`} width={1920} height={1280} alt="" /></div>
+            <li className={styles.item} style={{ '--index': 3 } as CSSProperties}>
+              <div className={styles.content}>
+                <img src={`/images/8.jpg.webp`} width={1920} height={1280} alt="" />
+              </div>
             </li>
-            <li className={styles.item}>
-              <div className={styles.content}><img src={`/images/19.jpg.webp`} width={1920} height={1280} alt="" /></div>
+            <li className={styles.item} style={{ '--index': 4 } as CSSProperties}>
+              <div className={styles.content}>
+                <img src={`/images/19.jpg.webp`} width={1920} height={1280} alt="" />
+              </div>
             </li>
           </ul>
           <article>

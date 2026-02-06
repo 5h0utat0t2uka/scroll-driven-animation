@@ -36,12 +36,12 @@
 .popover {
   position: fixed;
   inset: 0;
-  inline-size: min(90svi, 750px);
-  max-block-size: 90svb;
+  inline-size: min(85svi, 750px);
+  max-block-size: 85svb;
   overflow: auto;
   /*background: white;*/
   margin: auto;
-  padding: 2em;
+  padding: 1.6em;
   border: none;
   border-radius: 8px;
   background: color-mix(in srgb, white 70%, transparent);
