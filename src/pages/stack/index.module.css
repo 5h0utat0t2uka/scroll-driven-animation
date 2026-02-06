@@ -1,20 +1,14 @@
 :root {
-  --min: 140px;
-  --max: 560px;
-  --test: clamp(
-    var(--min),
-    var(--min) + progress(100svi, 300px, 1000px) * (var(--max) - var(--min)),
-    var(--max)
-  );
   --items: 4;
-  /*--card-block-size: min(55cqi, 640px);*/
-  --card-block-size: var(--test);
-      /*--card-height: 40vw;*/
-  /*--card-margin: 4vw;*/
-  --card-margin: 32px;
-  --card-top-offset: 32px;
-
-  /*--outline-inline-size: 0px;*/
+  --block-min: 140px;
+  --block-max: 560px;
+  --stack-block-size: clamp(
+    var(--block-min),
+    var(--block-min) + progress(100svi, 300px, 1000px) * (var(--block-max) - var(--block-min)),
+    var(--block-max)
+  );
+  --stack-margin: 32px;
+  --stack-offset: 32px;
 }
 @keyframes scale {
 	to {
@@ -39,7 +33,6 @@
     font-family: "Instrument Serif", serif;
     font-weight: 100;
     font-style: normal;
-
     font-size: clamp(
       var(--text-lg-min),
       var(--text-lg-min) + progress(100svi, 375px, 1280px) * (var(--text-lg-max) - var(--text-lg-min)),
@@ -78,7 +71,7 @@
     container-type: inline-size;
     /*display: grid;*/
     min-block-size: 100svb;
-    padding-block-start: calc(var(--card-margin) * 4);
+    padding-block-start: calc(var(--stack-margin) * 4);
 
     > .list {
       view-timeline-name: --cards-element-scrolls-in-body;
@@ -87,21 +80,18 @@
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: auto;
-      grid-template-rows: repeat(var(--items), var(--card-block-size));
-      gap: var(--card-margin);
+      grid-template-rows: repeat(var(--items), var(--stack-block-size));
+      gap: var(--stack-margin);
       list-style: none;
-      padding-block-end: calc(var(--items) * var(--card-top-offset));
-      margin-block-end: var(--card-margin);
-      /*padding: 0;*/
+      padding-block-end: calc(var(--items) * var(--stack-offset));
+      margin-block-end: var(--stack-margin);
       > .item {
         --index0: calc(var(--index) - 1);
        	--reverse-index: calc(var(--items) - var(--index0)); /* reverse index */
        	--reverse-index0: calc(var(--reverse-index) - 1); /* 0-based reverse index */
-
         position: sticky;
         top: 0;
-        padding-block-start: calc(var(--index) * var(--card-top-offset));
-
+        padding-block-start: calc(var(--index) * var(--stack-offset));
         &:nth-child(1) { --index: 1 }
         &:nth-child(2) { --index: 2 }
         &:nth-child(3) { --index: 3 }
@@ -126,14 +116,10 @@
       inline-size: min(90cqi, 1000px);
       margin: auto;
       > h2 {
-        /*margin-block: 1.6em;*/
-        margin-block-end: calc(var(--card-margin) * 1);
+        margin-block-end: calc(var(--stack-margin) * 1);
         font-family: "Instrument Serif", serif;
         font-weight: 100;
         font-style: normal;
-        /*font-family: "Geist", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;*/
         font-size: clamp(
           var(--text-lg-min),
           var(--text-lg-min) + progress(100svi, 375px, 1280px) * (var(--text-lg-max) - var(--text-lg-min)),
@@ -141,8 +127,7 @@
         );
       }
       > p {
-        margin-block-end: calc(var(--card-margin) * 4);
-        /*color: dimgray;*/
+        margin-block-end: calc(var(--stack-margin) * 4);
         text-align: justify;
         font-family: "Geist", sans-serif;
         font-optical-sizing: auto;
@@ -152,11 +137,8 @@
           var(--text-md-min) + progress(100svi, 375px, 1280px) * (var(--text-md-max) - var(--text-md-min)),
           var(--text-md-max)
         );
-
       }
     }
-
-
   }
 
 }

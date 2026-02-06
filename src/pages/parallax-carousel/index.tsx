@@ -4,7 +4,7 @@ import styles from './index.module.css'
 export default function Page() {
   return (
     <>
-      <RepositoryLink path="/tree/main/src/pages/parallax" />
+      <RepositoryLink path="/tree/main/src/pages/parallax-carousel" />
       <div className={styles.container}>
         <section className={styles.hero}>
           <h1>Parallax carousel slider with animation timeline</h1>

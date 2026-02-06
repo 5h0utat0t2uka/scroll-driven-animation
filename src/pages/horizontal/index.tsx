@@ -1,5 +1,4 @@
 import { RepositoryLink } from "../../components/link";
-// import { ScrollBorder } from "../../components/scroll-border";
 import styles from './index.module.css'
 
 export default function Page() {
@@ -9,7 +8,6 @@ export default function Page() {
       <div className={styles.container}>
         <section className={styles.hero}>
           <h1>Horizontal scroll with view timeline</h1>
-          {/*<ScrollBorder />*/}
         </section>
         <section className={styles.horizontal}>
           <div className={styles.body}>

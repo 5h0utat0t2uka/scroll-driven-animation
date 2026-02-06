@@ -18,10 +18,19 @@ const router = createBrowserRouter([
         }
       },
       {
-        path: "parallax",
+        path: "parallax-carousel",
         lazy: async () => {
           const [{ default: Page }] = await Promise.all([
-            import("./pages/parallax/index")
+            import("./pages/parallax-carousel/index")
+          ]);
+          return { Component: Page };
+        }
+      },
+      {
+        path: "parallax-elements",
+        lazy: async () => {
+          const [{ default: Page }] = await Promise.all([
+            import("./pages/parallax-elements/index")
           ]);
           return { Component: Page };
         }
