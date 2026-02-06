@@ -115,16 +115,30 @@
     > article {
       inline-size: min(90cqi, 1000px);
       margin: auto;
-      > h2 {
+      > hgroup {
+        display: grid;
+        gap: 1em;
         margin-block-end: calc(var(--stack-margin) * 1);
-        font-family: "Instrument Serif", serif;
-        font-weight: 100;
-        font-style: normal;
-        font-size: clamp(
-          var(--text-lg-min),
-          var(--text-lg-min) + progress(100svi, 375px, 1280px) * (var(--text-lg-max) - var(--text-lg-min)),
-          var(--text-lg-max)
-        );
+        > h2 {
+          font-family: "Instrument Serif", serif;
+          font-weight: 100;
+          font-style: normal;
+          font-size: clamp(
+            var(--text-lg-min),
+            var(--text-lg-min) + progress(100svi, 375px, 1280px) * (var(--text-lg-max) - var(--text-lg-min)),
+            var(--text-lg-max)
+          );
+        }
+        > p {
+          font-family: "Geist", sans-serif;
+          font-optical-sizing: auto;
+          font-style: normal;
+          font-size: clamp(
+            var(--text-md-min),
+            var(--text-md-min) + progress(100svi, 375px, 1280px) * (var(--text-md-max) - var(--text-md-min)),
+            var(--text-md-max)
+          );
+        }
       }
       > p {
         margin-block-end: calc(var(--stack-margin) * 4);

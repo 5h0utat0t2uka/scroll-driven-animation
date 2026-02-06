@@ -1,11 +1,15 @@
 import type { CSSProperties } from "react";
 import { RepositoryLink } from "../../components/link";
+import { Popover } from "../../components/popover";
 import styles from './index.module.css'
 
 export default function Page() {
   return (
     <>
       <RepositoryLink path="/tree/main/src/pages/parallax-elements" />
+      <Popover>
+        <p>物理的に、前景レイヤーの画像が背景レイヤーの画像よりも速く動くようにする方が自然な見た目になるので適切な調整を行う</p>
+      </Popover>
       <div className={styles.container}>
         <section className={styles.hero}>
           <h1>Parallax elements with animation timeline</h1>

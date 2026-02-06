@@ -1,10 +1,14 @@
 import { RepositoryLink } from "../../components/link";
+import { Popover } from "../../components/popover";
 import styles from './index.module.css'
 
 export default function Page() {
   return (
     <>
       <RepositoryLink path="/tree/main/src/pages/grid" />
+      <Popover>
+        <p>親要素のスクロール領域を保つためフルスクリーンで利用しない、また特にタッチデバイスではUXが最悪になるので構成を切り替えることが出来る場面でのみ使用する</p>
+      </Popover>
       <div className={styles.container}>
         <section className={styles.hero}>
           <h1>Multi columns grid with animation timeline</h1>
